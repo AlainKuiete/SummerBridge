@@ -1,0 +1,2 @@
+year,month,day,dep_time,dep_delay,arr_time,arr_delay,carrier,tailnum,flight,origin,dest,air_time,distance,hour,minute
+2013,1,1,857,-3,1516,-14,HA,N380HA,51,JFK,HNL,659,4983,9,57
