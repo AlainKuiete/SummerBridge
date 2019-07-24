@@ -93,9 +93,9 @@ limit 3;
 /* ANSWERS 
 
 QUESTION 1
-
-year,month,day,dep_time,dep_delay,arr_time,arr_delay,carrier,tailnum,flight,origin,dest,air_time,distance,hour,minute
-2013,1,1,857,-3,1516,-14,HA,N380HA,51,JFK,HNL,659,4983,9,57
+  dest origin distance
+1  HNL    JFK     4983
+The furthest destination is HNL with 4983 from JFK
 
 QUESTION 2
 QUESTION 2A
@@ -105,98 +105,90 @@ engines
 4
 3
 
-QUESTION 2B
-engines = 1
-tailnum,year,type,manufacturer,model,engines,seats,speed,engine
-N567AA,1959,"Fixed wing single engine",DEHAVILLAND,"OTTER DHC-3",1,16,95,Reciprocating
-
-engines = 2
-tailnum,year,type,manufacturer,model,engines,seats,speed,engine
-N206UA,1999,"Fixed wing multi engine",BOEING,777-222,2,400,NULL,Turbo-fan
-
-engines = 3
-tailnum,year,type,manufacturer,model,engines,seats,speed,engine
-N854NW,2004,"Fixed wing multi engine",AIRBUS,A330-223,3,379,NULL,Turbo-fan
-
-engines = 4
-tailnum,year,type,manufacturer,model,engines,seats,speed,engine
-N670US,1990,"Fixed wing multi engine",BOEING,747-451,4,450,NULL,Turbo-jet
+QUESTION 2B Aircraft that has the must number of sits for each
+engines number.
+      model engines max.seats.
+1  A330-223       3        379
+2  A340-313       4        450
+3 EMB-145XR       2        400
+4       150       1         16
 
 
-QUESTION 3
+QUESTION 3 Total number of flights
 count(*)
 336776
 
 
-QUESTION 4
-carrier,tot_flights
-UA,58665
-AA,32729
-B6,54635
-DL,48110
-EV,54173
-MQ,26397
-US,20536
-WN,12275
-VX,5162
-FL,3260
-AS,714
-9E,18460
-F9,685
-HA,342
-YV,601
-OO,32
+QUESTION 4 Total number of flights by airline
+   carrier tot_flights
+1       UA       58665
+2       AA       32729
+3       B6       54635
+4       DL       48110
+5       EV       54173
+6       MQ       26397
+7       US       20536
+8       WN       12275
+9       VX        5162
+10      FL        3260
+11      AS         714
+12      9E       18460
+13      F9         685
+14      HA         342
+15      YV         601
+16      OO          32
+
+QUESTION 5 Airlines order by the number of flight in 
+descending order.
+  carrier num_flights
+1       UA       58665
+2       B6       54635
+3       EV       54173
+4       DL       48110
+5       AA       32729
+6       MQ       26397
+7       US       20536
+8       9E       18460
+9       WN       12275
+10      VX        5162
+11      FL        3260
+12      AS         714
+13      F9         685
+14      YV         601
+15      HA         342
+16      OO          32
 
 
-QUESTION 5
-carrier,num_flights
-UA,58665
-B6,54635
-EV,54173
-DL,48110
-AA,32729
-MQ,26397
-US,20536
-9E,18460
-WN,12275
-VX,5162
-FL,3260
-AS,714
-F9,685
-YV,601
-HA,342
-OO,32
 
-
-QUESTION 6
-carrier,num_flights
-UA,58665
-B6,54635
-EV,54173
-DL,48110
-AA,32729
+QUESTION 6 
+  carrier num_flights
+1      UA       58665
+2      B6       54635
+3      EV       54173
+4      DL       48110
+5      AA       32729
 
 
 QUESTION 7
-carrier,num_flights
-UA,41135
-B6,30022
-DL,28096
-AA,23583
-EV,6248
+  carrier num_flights
+1      UA       41135
+2      B6       30022
+3      DL       28096
+4      AA       23583
+5      EV        6248
 
 
 QUESTION 8
 a)
-name,alt
-"Imperial Co",-54
-"El Centro Naf",-42
+           name alt
+1   Imperial Co -54
+2 El Centro Naf -42
 
 b)
-carrier,tot_delay
-AS,-7041
-HA,-2365
-OO,346
+ carrier tot_delay
+1      AS     -7041
+2      HA     -2365
+3      OO       346
 
 
 
