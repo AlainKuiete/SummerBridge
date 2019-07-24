@@ -30,20 +30,8 @@ select * from planes
 group by engines;
 
 -- 2nd part
-select * from planes
-where engines = 1
-order by seats desc;
-
-select * from planes
-where engines = 2
-order by seats desc;
-
-select * from planes
-where engines = 3
-order by seats desc;
-
-select * from planes
-where engines = 4
+select model,engines, max(seats) from planes
+group by engines
 order by seats desc;
 
 -- Question 3
