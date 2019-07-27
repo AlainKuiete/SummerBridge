@@ -81,6 +81,7 @@ where rg.rate = 5
 group by vi.title
 order by 5_stars desc;
 /*
+Video_title number_of_5*
 Geostorm	8
 Thor: Ragnarok	6
 Murder on the Orient Express	5
@@ -89,11 +90,19 @@ Dunkirk	4
 
 
 -- find reviewer with a 5 rating on Geostorm
-select  rv.first_name, rv.last_name, rg.rate, vi.title from rating rg
+select  rv.first_name, rv.last_name from rating rg
 join reviewer rv  on rg.reviewer_id = rv.id
 join video vi on rg.video_id = vi.id
 where rg.rate = 5 and vi.title ='Geostorm';
 
 /*
-
+Reviewer first and last name
+David	May
+Theresa	Davis
+John	Smith
+Martin	Watkins
+Javier	Pastore
+Charlotte	Hare
+David	Paul
+Cherry	Wang
  */
